@@ -1,0 +1,52 @@
+html {
+  background: url(https://pbs.twimg.com/media/DLDzOY1X0AY6KB2.jpg:small) 0 center no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html:after {
+  position: absolute;
+  width: 100%;
+  content: '';
+  top: 0;
+  z-index: -1;
+  opacity: .3;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background: #000;
+  animation: bganim 10s
+}
+
+body {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body,html,html:after {
+  height: 100%;
+}
+
+@keyframes bganim {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: .3;
+  }
+}
+
+@media screen and (min-width: 735px) {
+  html {
+    background: url(https://pbs.twimg.com/media/DLDzOY1X0AY6KB2.jpg:large) center center no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
