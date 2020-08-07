@@ -1,0 +1,20 @@
+version: v1.0
+name: First pipeline example
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Install
+    task:
+      env_vars:
+        - name: APP_ENV
+          value: prod
+      jobs:
+        - name: NPM Install
+          commands:
+            - checkout
+            - echo "Installing dependencies..."
+            - npm install
+            - cache store node-modules-$(checksum package-lock.json) node_modules
+            - echo "done"
