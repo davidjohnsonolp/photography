@@ -81,14 +81,14 @@ class DJFooter extends HTMLElement {
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     switch(attrName){
-      case 'transparent':
-        this.shadowRoot.querySelector('footer').style.background =  newVal ? 'none' : 'linear-gradient(#333,#222)';
-        break;
-      case 'animate':
-        this.shadowRoot.querySelector('footer').className =  newVal ? 'animate' : '';
-        break;
-      default:
-        break;
+    case 'transparent':
+      this.shadowRoot.querySelector('footer').style.background =  newVal ? 'none' : 'linear-gradient(#333,#222)';
+      break;
+    case 'animate':
+      this.shadowRoot.querySelector('footer').className =  newVal ? 'animate' : '';
+      break;
+    default:
+      break;
     }
   }
 }
