@@ -123,14 +123,14 @@ class DJHeader extends HTMLElement {
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     switch(attrName){
-      case 'transparent':
-        this.shadowRoot.querySelector('header').style.background =  newVal ? 'none' : 'linear-gradient(#333,#222)';
-        break;
-      case 'animate':
-        this.shadowRoot.querySelector('header').className =  newVal ? 'animate' : '';
-        break;
-      default:
-        break;
+    case 'transparent':
+      this.shadowRoot.querySelector('header').style.background =  newVal ? 'none' : 'linear-gradient(#333,#222)';
+      break;
+    case 'animate':
+      this.shadowRoot.querySelector('header').className =  newVal ? 'animate' : '';
+      break;
+    default:
+      break;
     }
   }
 }

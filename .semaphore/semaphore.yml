@@ -1,5 +1,5 @@
 version: v1.0
-name: First pipeline example
+name: Photography Pipeline
 agent:
   machine:
     type: e1-standard-2
@@ -17,4 +17,18 @@ blocks:
             - echo "Installing dependencies..."
             - npm install
             - cache store node-modules-$(checksum package-lock.json) node_modules
+            - echo "done"
+
+  - name: "Unit & Integration Tests"
+    task:
+      prologue:
+        commands:
+          - checkout
+          - cache restore node-modules-$(checksum package-lock.json),node-modules-
+
+      jobs:
+        - name: ESLint
+          commands:
+            - echo "Running linter..."
+            - npm run lint
             - echo "done"

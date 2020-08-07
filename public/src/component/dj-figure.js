@@ -37,14 +37,14 @@ class DJFigure extends HTMLElement {
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     switch(attrName){
-      case 'src':
-        this._img.setAttribute('src', newVal);
-        break;
-      case 'alt':
-        this._img.setAttribute('alt', newVal);
-        break;
-      default:
-        break;
+    case 'src':
+      this._img.setAttribute('src', newVal);
+      break;
+    case 'alt':
+      this._img.setAttribute('alt', newVal);
+      break;
+    default:
+      break;
     }
   }
 }

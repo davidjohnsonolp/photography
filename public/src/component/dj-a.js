@@ -34,12 +34,12 @@ class DJA extends HTMLElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    switch(attrName){
-      case 'href':
-        this.shadowRoot.querySelector('a').setAttribute('href',newVal);
-        break;
-      default:
-        break;
+    switch(attrName) {
+    case 'href':
+      this.shadowRoot.querySelector('a').setAttribute('href',newVal);
+      break;
+    default:
+      break;
     }
   }
 }
