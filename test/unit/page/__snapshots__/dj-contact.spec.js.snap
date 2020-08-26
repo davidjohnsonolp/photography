@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DJContact Contact Page renders correctly 1`] = `
+Object {
+  "html": "
+      <style>
+        :host {
+          display: flex;
+          flex-direction: column;
+          flex: 1 0 auto;
+        }
+        main {
+          background: white;
+          overflow: hidden;
+          flex: 1 0 auto;
+          padding: 0 5px;
+        }
+      </style>
+      <dj-header>
+      </dj-header>
+
+      <main>
+        <dj-h2>Contact</dj-h2>
+      </main>
+
+      <dj-footer>
+      </dj-footer>
+    ",
+}
+`;

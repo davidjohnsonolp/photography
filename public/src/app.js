@@ -20,3 +20,5 @@ router.setRoutes([
   {path: '/images', component: 'dj-images'},
   {path: '(.*)', redirect: '/'},
 ]);
+
+export { router };

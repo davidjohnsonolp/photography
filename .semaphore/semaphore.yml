@@ -32,3 +32,9 @@ blocks:
             - echo "Running linter..."
             - npm run lint
             - echo "done"
+
+        - name: Jest Unit
+          commands:
+            - echo "Running unit tests..."
+            - npm run test:unit
+            - echo "done"

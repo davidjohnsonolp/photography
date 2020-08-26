@@ -42,6 +42,10 @@ class DJHeader extends HTMLElement {
           display: block;
         }
 
+        header.transparent {
+          background: none;
+        }
+
         header.animate {
           animation: anim 3s;
         }
@@ -124,10 +128,16 @@ class DJHeader extends HTMLElement {
   attributeChangedCallback(attrName, oldVal, newVal) {
     switch(attrName){
     case 'transparent':
-      this.shadowRoot.querySelector('header').style.background =  newVal ? 'none' : 'linear-gradient(#333,#222)';
+      if (newVal == 'true')
+        this.shadowRoot.querySelector('header').classList.add('transparent');
+      else
+        this.shadowRoot.querySelector('header').classList.remove('transparent');
       break;
     case 'animate':
-      this.shadowRoot.querySelector('header').className =  newVal ? 'animate' : '';
+      if (newVal == 'true')
+        this.shadowRoot.querySelector('header').classList.add('animate');
+      else
+        this.shadowRoot.querySelector('header').classList.remove('animate');
       break;
     default:
       break;
