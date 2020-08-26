@@ -38,6 +38,7 @@ blocks:
         - name: Jest Unit
           commands:
             - echo "Running unit tests..."
+            - nvm use
             - node --version
             - npm run test:unit
             - echo "done"
