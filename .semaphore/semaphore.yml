@@ -10,16 +10,13 @@ blocks:
       env_vars:
         - name: APP_ENV
           value: prod
-
-      prologue:
-        commands:
-          - sem-version node 12.10.0
-
+          
       jobs:
         - name: NPM Install
           commands:
             - checkout
             - echo "Installing dependencies..."
+            - nvm use
             - npm install
             - cache store node-modules-$(checksum package-lock.json) node_modules
             - echo "done"
