@@ -10,6 +10,10 @@ blocks:
       env_vars:
         - name: APP_ENV
           value: prod
+
+      prologue:
+        - sem-version node 12.10.0
+
       jobs:
         - name: NPM Install
           commands:
