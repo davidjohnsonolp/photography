@@ -1,9 +1,8 @@
-import buildShadowRoot from '../lib/build-shadow-root.js';
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-class DJAbout extends HTMLElement {
-  constructor() {
-    super();
-    const html = `
+exports[`DJAbout About Page renders correctly 1`] = `
+Object {
+  "html": "
       <style>
         :host {
           display: flex;
@@ -28,7 +27,7 @@ class DJAbout extends HTMLElement {
 
       <main>
         <dj-h2>About David Johnson</dj-h2>
-        <dj-figure src="https://pbs.twimg.com/media/CqAdEzeXYAAlpub.jpg:small" alt="First shoot on the River Clyde">
+        <dj-figure src=\\"https://pbs.twimg.com/media/CqAdEzeXYAAlpub.jpg:small\\" alt=\\"First shoot on the River Clyde\\">
           First shoot on the River Clyde
         </dj-figure>
         <dj-p>
@@ -45,10 +44,6 @@ class DJAbout extends HTMLElement {
 
       <dj-footer>
       </dj-footer>
-    `;
-    buildShadowRoot(html,this);
-  }
+    ",
 }
-
-customElements.define('dj-about', DJAbout);
-export default DJAbout;
+`;

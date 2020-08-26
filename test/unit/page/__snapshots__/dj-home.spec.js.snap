@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DJHome Home Page renders correctly 1`] = `
+Object {
+  "html": "
+      <style>
+        :host {
+          
+        }
+      
+        dj-footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+        }
+      </style>
+      <dj-header transparent=\\"true\\" animate=\\"true\\">
+      </dj-header>
+
+      <main></main>
+
+      <dj-footer transparent=\\"true\\" animate=\\"true\\">
+      </dj-footer>
+    ",
+}
+`;

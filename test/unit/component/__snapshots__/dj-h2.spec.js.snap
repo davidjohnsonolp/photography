@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DJH2 Custom H2 renders correctly 1`] = `
+Object {
+  "html": "
+      <style>
+        :host {
+        }
+        h2 {
+          display: block;
+          font-size: 1.5em;
+          margin: 0.83em 0;
+          font-weight: bold;
+        }
+      </style>
+      <h2>
+        <slot></slot>
+      </h2>
+    ",
+}
+`;

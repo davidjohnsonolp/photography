@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DJFigure Custom Figure renders correctly 1`] = `
+Object {
+  "html": "
+      <style>
+        :host {
+        }
+        figure {
+          margin: 0 10px;
+        }
+        figure img {
+          width: 100%;
+        }
+        figure figcaption {
+          color: dimgray;
+          font-style: italic;
+          text-align: center;
+        }
+      </style>
+      <figure>
+        <img>
+        <figcaption>
+          <slot></slot>
+        </figcaption>
+      </figure>
+    ",
+}
+`;
+
+exports[`DJFigure Custom Figure renders correctly with alt 1`] = `
+Object {
+  "html": "
+      <style>
+        :host {
+        }
+        figure {
+          margin: 0 10px;
+        }
+        figure img {
+          width: 100%;
+        }
+        figure figcaption {
+          color: dimgray;
+          font-style: italic;
+          text-align: center;
+        }
+      </style>
+      <figure>
+        <img alt=\\"Test Alt\\">
+        <figcaption>
+          <slot></slot>
+        </figcaption>
+      </figure>
+    ",
+}
+`;
+
+exports[`DJFigure Custom Figure renders correctly with src 1`] = `
+Object {
+  "html": "
+      <style>
+        :host {
+        }
+        figure {
+          margin: 0 10px;
+        }
+        figure img {
+          width: 100%;
+        }
+        figure figcaption {
+          color: dimgray;
+          font-style: italic;
+          text-align: center;
+        }
+      </style>
+      <figure>
+        <img src=\\"http://www.test.com/test.jpg\\">
+        <figcaption>
+          <slot></slot>
+        </figcaption>
+      </figure>
+    ",
+}
+`;

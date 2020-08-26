@@ -48,6 +48,9 @@ class DJFooter extends HTMLElement {
         footer.animate {
           animation: footanim 3s;
         }
+        footer.transparent {
+          background: none;
+        }
         @keyframes footanim {
           from {
             opacity: 0;
@@ -82,10 +85,16 @@ class DJFooter extends HTMLElement {
   attributeChangedCallback(attrName, oldVal, newVal) {
     switch(attrName){
     case 'transparent':
-      this.shadowRoot.querySelector('footer').style.background =  newVal ? 'none' : 'linear-gradient(#333,#222)';
+      if (newVal == 'true')
+        this.shadowRoot.querySelector('footer').classList.add('transparent');
+      else
+        this.shadowRoot.querySelector('footer').classList.remove('transparent');
       break;
     case 'animate':
-      this.shadowRoot.querySelector('footer').className =  newVal ? 'animate' : '';
+      if (newVal == 'true')
+        this.shadowRoot.querySelector('footer').classList.add('animate');
+      else
+        this.shadowRoot.querySelector('footer').classList.remove('animate');
       break;
     default:
       break;

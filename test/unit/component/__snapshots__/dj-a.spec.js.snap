@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DJA Custom Anchor renders correctly 1`] = `
+Object {
+  "html": "
+      <style>
+        :host {
+        }
+        a {
+          color: royalblue;
+          text-decoration: none;
+        }
+        a:hover {
+          color: salmon;
+          -webkit-transition: .2s linear 0s;
+          -moz-transition: .2s linear 0s;
+          -o-transition: .2s linear 0s;
+          transition: .2s linear 0s;
+        }
+      </style>
+      <a>
+        <slot></slot>
+      </a>
+    ",
+}
+`;
+
+exports[`DJA Custom Anchor renders correctly with href 1`] = `
+Object {
+  "html": "
+      <style>
+        :host {
+        }
+        a {
+          color: royalblue;
+          text-decoration: none;
+        }
+        a:hover {
+          color: salmon;
+          -webkit-transition: .2s linear 0s;
+          -moz-transition: .2s linear 0s;
+          -o-transition: .2s linear 0s;
+          transition: .2s linear 0s;
+        }
+      </style>
+      <a href=\\"http://www.test.com/\\">
+        <slot></slot>
+      </a>
+    ",
+}
+`;

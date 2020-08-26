@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "lint": "eslint . --ignore-path .eslintignore --ext .js"
+    "lint": "eslint . --ignore-path .eslintignore --ext .js",
+    "test": "jest",
+    "test:unit": "jest --verbose ./test/unit"
   },
   "dependencies": {
     "@vaadin/router": "^1.6.0",
@@ -15,6 +17,10 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
-    "eslint": "^5.13.0"
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-jest": "^26.3.0",
+    "eslint": "^5.13.0",
+    "jest": "^26.4.0"
   }
 }
