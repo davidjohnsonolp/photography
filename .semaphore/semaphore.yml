@@ -12,7 +12,8 @@ blocks:
           value: prod
 
       prologue:
-        - sem-version node 12.10.0
+        commands:
+          - sem-version node 12.10.0
 
       jobs:
         - name: NPM Install
