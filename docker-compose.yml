@@ -1,0 +1,24 @@
+
+version: "2"
+services:
+  app:
+    container_name: app
+    build: .
+    ports:      
+      - "3000:3000"
+    depends_on:
+      - chrome-container
+    volumes:
+      - ./tests:/tests
+      - ./package.json:/package.json
+      - ./package-lock.json:/package-lock.json
+      - ./.gitignore:/.gitignore
+      - ./app.js:/app.js
+
+  chrome-container:
+    container_name: chrome-container
+    image: selenium/standalone-chrome:3.4.0
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "4444:4444"

@@ -6,7 +6,9 @@
     "start": "node ./bin/www",
     "lint": "eslint . --ignore-path .eslintignore --ext .js",
     "test": "jest",
-    "test:unit": "jest --verbose ./test/unit"
+    "test:unit": "jest --verbose ./test/unit",
+    "test:e2e": "codeceptjs run --steps --verbose --config=./codecept.conf.js",
+    "selenium": "./node_modules/.bin/selenium-standalone install && ./node_modules/.bin/selenium-standalone start"
   },
   "dependencies": {
     "@vaadin/router": "^1.6.0",
@@ -19,8 +21,12 @@
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
+    "@wdio/selenium-standalone-service": "^6.4.0",
     "babel-jest": "^26.3.0",
+    "codeceptjs": "^2.6.10",
     "eslint": "^5.13.0",
-    "jest": "^26.4.0"
+    "jest": "^26.4.0",
+    "selenium-standalone": "^6.19.0",
+    "webdriverio": "^6.4.6"
   }
 }
