@@ -11,7 +11,7 @@ exports.config = {
     WebDriver: {
       url: 'http://localhost:3000/',
       browser: 'chrome',
-      host: '127.0.0.1',
+      host: 'chrome-container', // change to localhost to run locally
       port: 4444,
       restart: false
     }
