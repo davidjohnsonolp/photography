@@ -9,7 +9,7 @@ exports.config = {
   output: './output',
   helpers: {
     WebDriver: {
-      url: 'http://localhost:3000/',
+      url: 'http://app:3000/', // change to localhost to run locally
       browser: 'chrome',
       host: 'chrome-container', // change to localhost to run locally
       port: 4444,
