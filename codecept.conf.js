@@ -9,9 +9,9 @@ exports.config = {
   output: './output',
   helpers: {
     WebDriver: {
-      url: 'http://app:3000/', // change to localhost to run locally
-      browser: 'chrome',
-      host: 'chrome-container', // change to localhost to run locally
+      url: 'http://' + (process.env.APP_NAME || 'localhost') + ':3000/',
+      browser: process.env.SELENIUM_BROWSER || 'chrome',
+      host: process.env.SELENIUM_HOST || 'localhost',
       port: 4444,
       restart: false
     }
