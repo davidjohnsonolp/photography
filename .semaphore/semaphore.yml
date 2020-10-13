@@ -42,3 +42,14 @@ blocks:
             - node --version
             - npm run test:unit
             - echo "done"
+
+  - name: "Acceptance tests"
+    task:
+      jobs:
+        - name: E2E Chrome
+          commands:
+            - checkout
+            - echo "Running e2e tests..."
+            - docker-compose up -d --build
+            - docker exec -it app npm run test:e2e:docker
+            - echo "done"
