@@ -1,6 +1,6 @@
 Feature('home');
 
-Scenario('test something', (I) => {
+Scenario('App loads', (I) => {
   I.amOnPage('/');
   I.see('David Johnson');
   I.see('Outdoor & Landscape Photography');
