@@ -1,4 +1,4 @@
-import {Router} from './lib/vaadin-router.js';
+import {Router} from './web_modules/@vaadin/router.js';
 import './component/dj-a.js';
 import './component/dj-nav.js';
 import './component/dj-h2.js';
