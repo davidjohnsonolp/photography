@@ -7,7 +7,7 @@
     "lint": "eslint . --ignore-path .eslintignore --ext .js",
     "test": "jest",
     "test:unit": "npm test -- --verbose ./test/unit",
-    "test:unit:coverage:changed": "npm test -- --coverage --changedSince=master ./test/unit",
+    "test:unit:coverage": "npm test -- --coverage ./test/unit",
     "test:e2e": "codeceptjs run --steps --verbose --config=./codecept.conf.js",
     "test:e2e:docker": "SELENIUM_HOST=chrome-container APP_NAME=app codeceptjs run --steps --verbose --config=./codecept.conf.js",
     "selenium": "./node_modules/.bin/selenium-standalone install && ./node_modules/.bin/selenium-standalone start",
@@ -42,7 +42,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm run test:unit:coverage:changed"
+      "pre-push": "npm run test:unit:coverage"
     }
   },
   "snowpack": {
