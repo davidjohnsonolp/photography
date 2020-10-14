@@ -42,7 +42,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm run test:coverage:changed"
+      "pre-push": "npm run test:unit:coverage:changed"
     }
   },
   "snowpack": {
