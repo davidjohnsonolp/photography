@@ -7,7 +7,7 @@ COPY package*.json ./
 
 RUN npm install
 
-RUN snowpack
+RUN npx snowpack
 
 COPY . .
 
