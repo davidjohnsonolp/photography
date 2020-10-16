@@ -19,6 +19,7 @@ blocks:
             - nvm use
             - npm install
             - cache store node-modules-$(checksum package-lock.json) node_modules
+            - cache store web-modules-$(checksum package-lock.json) public/src/web_modules
             - echo "done"
 
   - name: "Unit & Integration Tests"
@@ -26,7 +27,8 @@ blocks:
       prologue:
         commands:
           - checkout
-          - cache restore node-modules-$(checksum package-lock.json),node-modules-
+          - cache restore node-modules-$(checksum package-lock.json),node-modules
+          - cache restore web-modules-$(checksum package-lock.json),web-modules
 
       jobs:
         - name: ESLint

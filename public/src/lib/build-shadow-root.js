@@ -1,3 +1,4 @@
+/*global ShadyCSS*/
 export default (html, elem) => {
   const template = document.createElement('template');
   template.innerHTML = html;
